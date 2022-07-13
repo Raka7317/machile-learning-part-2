@@ -1,37 +1,34 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[28]:
 
 
 import requests
 
 
-# In[29]:
+
 
 
 from datetime import datetime, timedelta
 
 
-# In[30]:
+
 
 
 import time
 
 
-# In[31]:
+
 
 
 import pytz
 
 
-# In[32]:
+
 
 
 from os import environ
 
 
-# In[33]:
+
 
 
 Define all the constants
@@ -45,8 +42,6 @@ slot_found=False
 header={'User-Agent': 'Chrome/84.0.4147.105 safari/537.36'}
 
 
-# In[34]:
-
 
 def update_timestamp_send_Request(PINCODE):
      raw_TS = datetime.now(IST) + timedelta(days=1)      # Tomorrows date
@@ -59,7 +54,7 @@ def update_timestamp_send_Request(PINCODE):
      return raw_JSON, today_date, curr_time
 
 
-# In[35]:
+
 
 
 def get_availability_45(age = 45):
@@ -77,7 +72,6 @@ def get_availability_45(age = 45):
         print (f"INFO: [{today_date}-{curr_time}] Vaccine NOT-Found for 45+ at {PINCODE}")
 
 
-# In[36]:
 
 
 def get_availability_18(age = 18):
@@ -95,7 +89,7 @@ def get_availability_18(age = 18):
          print (f"INFO: [{today_date}-{curr_time}] Vaccine NOT Found for 18+ at {PINCODE}")
 
 
-# In[37]:
+
 
 
 def send_msg_on_telegram(msg):
@@ -107,7 +101,7 @@ else:
     print ("Could not send Message")
 
 
-# In[38]:
+
 
 
 if name == "main":    
@@ -117,13 +111,13 @@ if name == "main":
         time.sleep(time_interval)
 
 
-# In[ ]:
 
 
 
 
 
-# In[ ]:
+
+
 
 
 
